@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <title>Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="ts-container">
+        <div class="ts-header">
+            <div class="ts-logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+            </div>
+            <div class="ts-social">
+                <ul>
+                    <li><a href="#"><img src="images/phone.png" alt="Phone"></a></li>
+                    <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="images/googleplus.png" alt="Google Plus"></a></li>
+                    <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+                </ul>
+                <a href="login.html" class="ts-login-btn">Login</a>
+            </div>
+        </div>
+        <div class="ts-nav">
+            <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testmonials.html">Testmonials</a></li>
+                <li class="active"><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="site-map.html">Site Map</a></li>
+            </ul>
+        </div>
+        <div class="ts-content contact-us">
+            <h2>Contact Us</h2>
+            <p>Thank you for your interest in Total solution. Interpersonal relationships make up the core foundation of our operations and values. We encourage and emphasize open and direct communication among our team, clients and supplier members. For media and direct inquiries, please reach out to our Headquarters via the contact information below.</p>
+            
+            <div class="ts-contact-us">
+                <div class="ts-contact-us-info">
+                    <h3>Total solution</h3>
+                    <p>Address: 19 Nguyen Trai, Thanh Xuan, Hanoi.</p>
+                    <p>Phone: +84 93 9345 987</p>
+                    <p>Email: <a href="mailto:totalsolutionabpocompany@gmail.com">TotalSolutionABPOcompany@gmail.com</a></p>
+                    <p>Facebook: Totalsolution</p>
+                    <p>Twitter: @totalsolution_2018</p>
+                </div>
+                <div class="ts-contact-us-map" id="map">
+
+                </div>
+            </div>
+        </div>
+        <div class="ts-footer">
+            <div class="ts-footer-wrapper">
+                    <div class="ts-footer-logo">
+                        <img src="images/white-logo.png" alt="Footer Logo" />
+                    </div>
+                    <div class="ts-footer-info">
+                        <p><span class="upper">Address</span>: 19 Nguyen Trai, Thanh Xuan, Ha Noi.</p>
+                        <p><span class="upper">Phone</span>: 84 9345 987</p>
+                        <p><span class="upper">Email</span>: TotalsolutionABPOcompany@gmail.com</p>
+                    </div>
+                    <p class="ts-copyright">Copyright 2018 Total Solution, ABPO Company. All right reserved. </p>
+            </div>
+        </div>
+    </div>
+    <script>
+            var map;
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: new google.maps.LatLng(21.002745, 105.820104),
+                mapTypeId: 'roadmap'
+              });
+      
+              var icons = {
+                info: {
+                  icon: 'images/marker.png'
+                }
+              };
+      
+              var features = [
+                {
+                  position: new google.maps.LatLng(21.002745, 105.820104),
+                  type: 'info'
+                }
+              ];
+      
+              // Create markers.
+              features.forEach(function(feature) {
+                var marker = new google.maps.Marker({
+                  position: feature.position,
+                  icon: icons[feature.type].icon,
+                  map: map
+                });
+              });
+            }
+          </script>
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBccCirP3qSlRkJi21oAUgQOQckpT5xFVg&callback=initMap">
+          </script>
+</body>
+</html>

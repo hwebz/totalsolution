@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <title>Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="ts-container">
+        <div class="ts-loading-logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <div class="ts-loading">
+            <h1>Loading...</h1>
+            <div class="ts-control">
+                <div class="ts-control-wrapper">
+                    <button id="up">+</button>
+                    <h3>Volume</h3>
+                    <button id="down">-</button>
+                    <h3 id="skip" data-to="home.html"><a href="#">Skip</a></h3>
+                </div>
+            </div>
+
+            <audio id="bgMusic">
+                <source src="audio/OST.ogg" type="audio/ogg">
+                <source src="audio/OST.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script src="js/audio-control.js"></script>
+</body>
+</html>
